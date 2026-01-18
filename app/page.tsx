@@ -310,7 +310,7 @@ export default function LunchBoxLanding() {
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="ghost"
-                      className="w-full justify-between text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="w-full justify-between text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
                     >
                       ABOUT US
                       <ChevronDown className="h-4 w-4" />
@@ -321,7 +321,7 @@ export default function LunchBoxLanding() {
                     className="w-[calc(100vw-2rem)] bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                   >
                     <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
                       onClick={() => {
                         router.push('/about')
                         setIsMobileMenuOpen(false)
@@ -447,8 +447,8 @@ export default function LunchBoxLanding() {
               창업? 더이상 어렵지 않아요
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-[10rem] lg:text-[12rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
-              <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500">
+            <h1 className="text-5xl sm:text-6xl md:text-[10rem] lg:text-[12rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
+              <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500 mb-1">
                 inha venture
               </span>
               <span className="block bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent group-hover:tracking-wide transition-all duration-500">

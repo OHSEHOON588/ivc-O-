@@ -172,8 +172,10 @@ export default function ContactPage() {
                     alt="인하대학교 위치 지도"
                     width={800}
                     height={600}
+                    sizes="(max-width: 768px) 100vw, 800px"
                     className="w-full h-auto"
-                    unoptimized
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
               </div>

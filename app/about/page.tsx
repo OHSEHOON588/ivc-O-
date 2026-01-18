@@ -171,8 +171,9 @@ export default function AboutPage() {
                     alt="IVC Traditional Logo"
                     width={600}
                     height={605}
+                    sizes="(max-width: 1024px) 200px, 600px"
                     className="w-full h-full object-contain"
-                    unoptimized
+                    loading="lazy"
                   />
                 </div>
 
@@ -184,8 +185,9 @@ export default function AboutPage() {
                       alt="IVC Traditional Logo"
                       width={600}
                       height={605}
+                      sizes="200px"
                       className="w-full h-full object-contain opacity-80"
-                      unoptimized
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -228,8 +230,12 @@ export default function AboutPage() {
                   alt="2024 Alumni 기업 매출 - 총 163,364,225,842 원"
                   width={1200}
                   height={675}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                   className="w-full h-auto object-contain rounded-lg"
-                  unoptimized
+                  loading="lazy"
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
               </div>
             </div>
