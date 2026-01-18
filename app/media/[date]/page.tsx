@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown, ArrowLeft, Menu, X } from "lucide-react"
+import { ChevronDown, ArrowLeft } from "lucide-react"
 import { useState } from "react"
 import { useRouter, useParams } from "next/navigation"
 import Image from "next/image"
@@ -16,7 +16,6 @@ export default function MediaDetailPage() {
   const router = useRouter()
   const params = useParams()
   const date = params.date as string
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // 날짜에 따른 제목 매핑
   const getTitle = (date: string) => {
@@ -56,21 +55,8 @@ export default function MediaDetailPage() {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-600 dark:text-white/70 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
-              aria-label="메뉴 열기"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-
-            {/* Navigation Menu - Desktop */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            {/* Navigation Menu - 항상 표시 */}
+            <div className="flex items-center gap-6 lg:gap-8">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
