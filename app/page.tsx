@@ -174,7 +174,7 @@ export default function LunchBoxLanding() {
       <main className="relative z-10">
         {/* Responsive Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10" role="navigation" aria-label="Main navigation">
-          <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 lg:px-12">
             <div className="flex items-center justify-between h-16 md:h-20">
               {/* Logo */}
               <div className="flex items-center">
@@ -271,7 +271,7 @@ export default function LunchBoxLanding() {
         </nav>
 
         {/* Creative Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-8 md:px-12 lg:px-16 relative">
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 relative">
           {/* Morphing Circles/Squares - simplified with CSS variables */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] border border-gray-200 dark:border-white/5 transition-all duration-500 ease-out hw-accelerate"
@@ -304,7 +304,7 @@ export default function LunchBoxLanding() {
               창업? 더이상 어렵지 않아요
             </Badge>
 
-            <h1 className="text-[6rem] md:text-[10rem] lg:text-[12rem] font-bold leading-none tracking-tighter mb-8 md:mb-12 group cursor-default">
+            <h1 className="text-4xl sm:text-5xl md:text-[10rem] lg:text-[12rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
               <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500">
                 inha venture
               </span>
@@ -313,13 +313,13 @@ export default function LunchBoxLanding() {
               </span>
             </h1>
 
-            <p className="text-lg text-gray-700 dark:text-white/80 mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-xl">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-xl px-4">
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <Button
-                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl group flex items-center"
+                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-5 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl group flex items-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
                 <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-6 md:h-7 w-auto mr-2" />
@@ -352,7 +352,7 @@ export default function LunchBoxLanding() {
           <div className="max-w-4xl mx-auto text-center px-8 md:px-12 lg:px-16 relative z-10">
             <h2
               id="cta-heading"
-              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white"
+              className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
             >
               Time to{" "}
               <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
@@ -360,13 +360,13 @@ export default function LunchBoxLanding() {
               </span>
               ?
             </h2>
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-white/70 mb-16 md:mb-20 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
               고민은 당신의 성공을 늦출 뿐입니다. 지금, 시작하세요.
             </p>
 
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <Button
-                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-8 md:px-12 py-6 md:py-8 text-lg md:text-2xl group flex items-center"
+                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-2xl group flex items-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
                 <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-7 md:h-8 w-auto mr-3" />
