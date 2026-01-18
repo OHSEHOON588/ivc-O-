@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import Image from "next/image"
@@ -21,7 +21,6 @@ interface AlumniCard {
 
 export default function AlumniVenturesPage() {
   const router = useRouter()
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Alumni Ventures 데이터 - 이미지와 링크를 포함
   // 사용자가 나중에 이미지와 링크를 추가할 예정
@@ -116,21 +115,8 @@ export default function AlumniVenturesPage() {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-600 dark:text-white/70 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
-              aria-label="메뉴 열기"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-
-            {/* Navigation Menu - Desktop */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            {/* Navigation Menu - 항상 표시 */}
+            <div className="flex items-center gap-6 lg:gap-8">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -210,117 +196,6 @@ export default function AlumniVenturesPage() {
               </Button>
             </div>
           </div>
-
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 dark:border-white/10 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md">
-              <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
-                {/* About Us */}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      className="w-full justify-between text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                    >
-                      ABOUT US
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    align="start"
-                    className="w-[calc(100vw-2rem)] bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
-                  >
-                    <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                      onClick={() => {
-                        router.push('/about')
-                        setIsMobileMenuOpen(false)
-                      }}
-                    >
-                      INTRODUCTION
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                      onClick={() => {
-                        router.push('/about/leadership')
-                        setIsMobileMenuOpen(false)
-                      }}
-                    >
-                      LEADERSHIP TEAM
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                {/* Recruiting */}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      className="w-full justify-between text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                    >
-                      RECRUITING
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    align="start"
-                    className="w-[calc(100vw-2rem)] bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
-                  >
-                    <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                      onClick={() => {
-                        router.push('/recruiting/application-process')
-                        setIsMobileMenuOpen(false)
-                      }}
-                    >
-                      APPLICATION PROCESS & TIMELINE
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                      onClick={() => {
-                        router.push('/recruiting/qa')
-                        setIsMobileMenuOpen(false)
-                      }}
-                    >
-                      Q&A
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                {/* Other Menu Items */}
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                  onClick={() => {
-                    router.push("/alumni-ventures")
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  ALUMNI VENTURES
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                  onClick={() => {
-                    router.push("/media")
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  MEDIA
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 min-h-[48px] py-3"
-                  onClick={() => {
-                    router.push("/contact")
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  CONTACT
-                </Button>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
 
