@@ -12,25 +12,17 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'IVC',
+  description: '인하대학교 유일 실전 창업 동아리 - 인하벤처클럽',
+  generator: 'Next.js',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
+        url: '/images/ivc-logo.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/images/ivc-logo.svg',
   },
 }
 
