@@ -313,19 +313,28 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* Text Content - 모바일 퍼스트 */}
-                <div className="w-full text-sm sm:text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/80 leading-relaxed">
+                {/* Text Content - PC 환경은 원래 개행 유지 */}
+                <div className="w-full text-sm sm:text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/80 leading-relaxed break-keep">
                   <p className="mb-2 md:mb-[13.5px]">
-                    인하벤처클럽(IVC, Inha Venture Club)은 1997년, 대한민국 1세대 벤처기업 비트컴퓨터 창업자 조현정 회장에 의해 설립된 인하대학교 최초의 창업 동아리입니다.
+                    인하벤처클럽(IVC, Inha Venture Club)은<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>1997년, 대한민국 1세대 벤처기업 비트컴퓨터 창업자 조현정 회장에 의해 설립된<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>인하대학교 최초의 창업 동아리입니다.
                   </p>
                   <p className="mb-2 md:mb-[13.5px]">
-                    IVC는 단순한 창업 동아리를 넘어, 인하대학교 창업지원단에 소속된 직할 조직으로서 운영되고 있으며 현재는 인하대학교 내 최대 규모의 창업 커뮤니티로 자리매김하고 있습니다.
+                    IVC는 단순한 창업 동아리를 넘어,<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>인하대학교 창업지원단에 소속된 직할 조직으로서 운영되고 있으며<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>현재는 인하대학교 내 최대 규모의 창업 커뮤니티로 자리매김하고 있습니다.
                   </p>
                   <p className="mb-2 md:mb-[13.5px]">
-                    설립 이후 IVC는 아이디어 단계에 머무르지 않고, 문제 정의–해결–실행까지 이어지는 실전 중심의 창업 활동을 지향해 왔습니다. 이를 위해 정기 세미나, 프로젝트 기반 활동, 기업 연계 프로그램, 선·후배 간 네트워킹을 통해 실제 창업 경험과 역량을 축적할 수 있는 환경을 만들어가고 있습니다.
+                    설립 이후 IVC는 아이디어 단계에 머무르지 않고,<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>문제 정의–해결–실행까지 이어지는 실전 중심의 창업 활동을 지향해 왔습니다.<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>이를 위해 정기 세미나, 프로젝트 기반 활동, 기업 연계 프로그램,<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>선·후배 간 네트워킹을 통해 실제 창업 경험과 역량을 축적할 수 있는 환경을 만들어가고 있습니다.
                   </p>
                   <p>
-                    IVC는 &apos;학생 창업가가 성장할 수 있는 가장 현실적인 커뮤니티&apos;를 목표로, 앞으로도 인하대학교 창업 생태계의 중심에서 도전과 실행을 이어가는 창업 인재들을 연결하고 지원해 나가고자 합니다.
+                    IVC는 &apos;학생 창업가가 성장할 수 있는 가장 현실적인 커뮤니티&apos;를 목표로,<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>앞으로도 인하대학교 창업 생태계의 중심에서<br className="hidden sm:inline" />
+                    <span className="sm:hidden"> </span>도전과 실행을 이어가는 창업 인재들을 연결하고 지원해 나가고자 합니다.
                   </p>
                 </div>
                 
