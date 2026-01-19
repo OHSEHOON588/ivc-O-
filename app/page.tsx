@@ -176,7 +176,7 @@ export default function LunchBoxLanding() {
       <main className="relative z-10">
         {/* Responsive Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10" role="navigation" aria-label="Main navigation">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 lg:px-12">
+          <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
             <div className="flex items-center justify-between h-16 md:h-20">
               {/* Logo */}
               <div className="flex items-center">
@@ -415,7 +415,7 @@ export default function LunchBoxLanding() {
             }}
           />
 
-          <div className="w-full max-w-6xl mx-auto text-center relative flex flex-col items-center">
+          <div className="w-full max-w-screen-xl mx-auto text-center relative flex flex-col items-center px-4 md:px-8 lg:px-12">
             <Badge
               variant="outline"
               className="inline-flex mb-6 md:mb-12 text-xs md:text-sm font-light border-gray-300 dark:border-white/20 text-gray-600 dark:text-white/80 px-3 md:px-4 py-1.5 md:py-2 items-center"
@@ -469,7 +469,7 @@ export default function LunchBoxLanding() {
             />
           </div>
 
-          <div className="w-full max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-12 lg:px-16 relative z-10 flex flex-col items-center">
+          <div className="w-full max-w-screen-xl mx-auto text-center px-4 md:px-8 lg:px-12 relative z-10 flex flex-col items-center">
             <h2
               id="cta-heading"
               className="w-full text-2xl sm:text-3xl md:text-[52.5px] lg:text-[60px] font-bold mb-6 sm:mb-8 md:mb-16 leading-tight text-gray-900 dark:text-white"

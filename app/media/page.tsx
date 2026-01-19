@@ -108,7 +108,7 @@ export default function MediaPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-950 dark:via-gray-900 dark:to-slate-950 text-gray-900 dark:text-white transition-colors duration-500">
       {/* Responsive Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10" role="navigation" aria-label="Main navigation">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+        <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <div className="flex items-center">
@@ -325,7 +325,7 @@ export default function MediaPage() {
       {/* Main Content */}
       <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
         <section className="py-8 md:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Title */}
             <div className="mb-8 md:mb-20 text-center">
               <h1 className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight">

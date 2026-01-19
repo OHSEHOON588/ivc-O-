@@ -261,7 +261,7 @@ export default function MediaDetailPage() {
       {/* Main Content */}
       <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
         <section className="py-8 md:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Back Button */}
             <Button
               variant="ghost"
