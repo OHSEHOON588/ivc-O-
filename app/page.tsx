@@ -433,7 +433,7 @@ export default function LunchBoxLanding() {
               </span>
             </h1>
 
-            <p className="w-full text-base sm:text-lg md:text-xl text-gray-700 dark:text-white/80 mb-6 sm:mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-4">
+            <p className="w-full text-base sm:text-lg md:text-xl text-gray-700 dark:text-white/80 mb-6 sm:mb-8 md:mb-16 max-w-3xl mx-auto leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words font-light px-2 sm:px-4">
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
@@ -480,7 +480,7 @@ export default function LunchBoxLanding() {
               </span>
               ?
             </h2>
-            <p className="w-full text-base sm:text-lg md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-8 sm:mb-12 md:mb-20 leading-relaxed">
+            <p className="w-full text-base sm:text-lg md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-8 sm:mb-12 md:mb-20 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words">
               고민은 당신의 성공을 늦출 뿐입니다. 지금, 시작하세요.
             </p>
 

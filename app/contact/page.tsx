@@ -265,7 +265,7 @@ export default function ContactPage() {
                 </span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] mx-auto mb-8 md:mb-12" />
-              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/70 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words max-w-3xl mx-auto">
                 IVC에 연락이 필요하신 경우 다음을 통해 문의해주세요.
               </p>
             </div>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-base md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">위치</h3>
-                    <p className="text-sm md:text-lg text-gray-700 dark:text-white/70 leading-relaxed break-keep">
+                    <p className="text-base md:text-lg text-gray-700 dark:text-white/70 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words">
                       인천광역시 미추홀구 인하로 100
                     </p>
                   </div>
@@ -305,11 +305,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">회장</h3>
-                  <p className="text-sm md:text-lg text-gray-700 dark:text-white/70 leading-relaxed break-keep">
-                    이름: 황두연<br />
-                    전화번호: <a href="tel:010-3346-0509" className="text-gray-900 dark:text-gray-900 hover:underline">010-3346-0509</a><br />
-                    이메일: <a href="mailto:dooyeon3927@naver.com" className="text-gray-900 dark:text-gray-900 hover:underline">dooyeon3927@naver.com</a>
-                  </p>
+                  <div className="text-base md:text-lg text-gray-700 dark:text-white/70 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words space-y-1">
+                    <p>이름: 황두연</p>
+                    <p>전화번호: <a href="tel:010-3346-0509" className="text-gray-900 dark:text-gray-900 hover:underline">010-3346-0509</a></p>
+                    <p>이메일: <a href="mailto:dooyeon3927@naver.com" className="text-gray-900 dark:text-gray-900 hover:underline">dooyeon3927@naver.com</a></p>
+                  </div>
                 </div>
               </div>
 
@@ -320,7 +320,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">이메일</h3>
-                  <p className="text-sm md:text-lg text-gray-700 dark:text-white/70 leading-relaxed break-keep">
+                  <p className="text-base md:text-lg text-gray-700 dark:text-white/70 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words">
                     <a href="mailto:inha.venture.club@gmail.com" className="text-gray-900 dark:text-gray-900 hover:underline">
                       inha.venture.club@gmail.com
                     </a>

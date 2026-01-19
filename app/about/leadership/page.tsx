@@ -268,7 +268,7 @@ export default function LeadershipPage() {
 
             {/* Content Area - 나중에 작성할 영역 */}
             <div className="text-center py-12 md:py-32">
-              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50">
+              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words">
                 내용은 추후 작성 예정입니다.
               </p>
             </div>
