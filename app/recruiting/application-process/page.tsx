@@ -138,80 +138,111 @@ export default function ApplicationProcessPage() {
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
+          {/* Mobile Navigation Menu - 계층 구조로 항상 펼쳐진 상태 */}
           {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
-              <div className="flex flex-col gap-2">
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/about')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  INTRODUCTION
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/about/leadership')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  LEADERSHIP TEAM
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/recruiting/application-process')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  APPLICATION PROCESS & TIMELINE
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/recruiting/qa')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  Q&A
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/alumni-ventures')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  ALUMNI VENTURES
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/media')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  MEDIA
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/contact')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  CONTACT
-                </Button>
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-2">
+              <div className="flex flex-col gap-0">
+                {/* ABOUT US 섹션 - 하위 메뉴 항상 펼쳐진 상태 */}
+                <div className="flex flex-col">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ABOUT US
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        router.push('/about')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      INTRODUCTION
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/about/leadership')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      LEADERSHIP TEAM
+                    </button>
+                  </div>
+                </div>
+
+                {/* RECRUITING 섹션 */}
+                <div className="flex flex-col border-t border-gray-200 dark:border-white/10 mt-1">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    RECRUITING
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        router.push('/recruiting/application-process')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      APPLICATION PROCESS & TIMELINE
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/recruiting/qa')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      Q&A
+                    </button>
+                  </div>
+                </div>
+
+                {/* 기타 메뉴 */}
+                <div className="flex flex-col border-t border-gray-200 dark:border-white/10 mt-1">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/alumni-ventures')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    ALUMNI VENTURES
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/media')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    MEDIA
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/contact')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    CONTACT
+                  </Button>
+                </div>
               </div>
             </div>
           )}
