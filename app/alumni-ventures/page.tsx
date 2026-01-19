@@ -121,10 +121,10 @@ export default function AlumniVenturesPage() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
                   >
                     ABOUT US
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3 w-3" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -132,13 +132,13 @@ export default function AlumniVenturesPage() {
                   className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                 >
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/about')}
                   >
                     INTRODUCTION
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/about/leadership')}
                   >
                     LEADERSHIP TEAM
@@ -149,10 +149,10 @@ export default function AlumniVenturesPage() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
                   >
                     RECRUITING
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3 w-3" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -160,13 +160,13 @@ export default function AlumniVenturesPage() {
                   className="w-56 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                 >
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/recruiting/application-process')}
                   >
                     APPLICATION PROCESS & TIMELINE
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/recruiting/qa')}
                   >
                     Q&A
@@ -175,21 +175,21 @@ export default function AlumniVenturesPage() {
               </DropdownMenu>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/alumni-ventures")}
               >
                 ALUMNI VENTURES
               </Button>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/media")}
               >
                 MEDIA
               </Button>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/contact")}
               >
                 CONTACT
@@ -205,7 +205,7 @@ export default function AlumniVenturesPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Title */}
             <div className="mb-16 md:mb-20 text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+              <h1 className="text-[27px] md:text-[45px] lg:text-[54px] font-bold mb-6 md:mb-8 leading-tight">
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   ALUMNI VENTURES
                 </span>
@@ -232,7 +232,7 @@ export default function AlumniVenturesPage() {
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                       className="object-contain group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
-                      quality={85}
+                      quality={70}
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       onError={(e) => {

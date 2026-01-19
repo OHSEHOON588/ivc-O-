@@ -193,10 +193,10 @@ export default function LunchBoxLanding() {
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="ghost"
-                      className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
-                    >
-                      ABOUT US
-                      <ChevronDown className="h-4 w-4" />
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
+                  >
+                    ABOUT US
+                    <ChevronDown className="h-3 w-3" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
@@ -204,13 +204,13 @@ export default function LunchBoxLanding() {
                     className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                   >
                     <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                       onClick={() => router.push('/about')}
                     >
                       INTRODUCTION
                     </DropdownMenuItem>
                     <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                       onClick={() => router.push('/about/leadership')}
                     >
                       LEADERSHIP TEAM
@@ -221,10 +221,10 @@ export default function LunchBoxLanding() {
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="ghost"
-                      className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
-                    >
-                      RECRUITING
-                      <ChevronDown className="h-4 w-4" />
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
+                  >
+                    RECRUITING
+                    <ChevronDown className="h-3 w-3" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
@@ -232,13 +232,13 @@ export default function LunchBoxLanding() {
                     className="w-56 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                   >
                     <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                       onClick={() => router.push('/recruiting/application-process')}
                     >
                       APPLICATION PROCESS & TIMELINE
                     </DropdownMenuItem>
                     <DropdownMenuItem
-                      className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                      className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                       onClick={() => router.push('/recruiting/qa')}
                     >
                       Q&A
@@ -247,21 +247,21 @@ export default function LunchBoxLanding() {
                 </DropdownMenu>
                 <Button
                   variant="ghost"
-                  className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
-                  onClick={() => router.push("/alumni-ventures")}
-                >
-                  ALUMNI VENTURES
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
-                  onClick={() => router.push("/media")}
-                >
-                  MEDIA
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
+                onClick={() => router.push("/alumni-ventures")}
+              >
+                ALUMNI VENTURES
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
+                onClick={() => router.push("/media")}
+              >
+                MEDIA
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                   onClick={() => router.push("/contact")}
                 >
                   CONTACT
@@ -305,7 +305,7 @@ export default function LunchBoxLanding() {
               창업? 더이상 어렵지 않아요
             </Badge>
 
-            <h1 className="text-5xl sm:text-6xl md:text-[10rem] lg:text-[12rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
+            <h1 className="text-[37.5px] sm:text-[45px] md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
               <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500 mb-1">
                 inha venture
               </span>
@@ -314,7 +314,7 @@ export default function LunchBoxLanding() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-xl px-4">
+            <p className="text-[12px] sm:text-[13.5px] text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-[15px] px-4">
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
@@ -353,7 +353,7 @@ export default function LunchBoxLanding() {
           <div className="max-w-4xl mx-auto text-center px-8 md:px-12 lg:px-16 relative z-10">
             <h2
               id="cta-heading"
-              className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
+              className="text-[22.5px] sm:text-[30px] md:text-[52.5px] lg:text-[60px] font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
             >
               Time to{" "}
               <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
@@ -361,7 +361,7 @@ export default function LunchBoxLanding() {
               </span>
               ?
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
+            <p className="text-[13.5px] sm:text-[15px] md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
               고민은 당신의 성공을 늦출 뿐입니다. 지금, 시작하세요.
             </p>
 

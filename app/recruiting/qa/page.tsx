@@ -52,10 +52,10 @@ export default function QAPage() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
                   >
                     ABOUT US
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3 w-3" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -63,13 +63,13 @@ export default function QAPage() {
                   className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                 >
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/about')}
                   >
                     INTRODUCTION
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/about/leadership')}
                   >
                     LEADERSHIP TEAM
@@ -80,10 +80,10 @@ export default function QAPage() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2 flex items-center gap-1"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
                   >
                     RECRUITING
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3 w-3" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -91,13 +91,13 @@ export default function QAPage() {
                   className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                 >
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/recruiting/application-process')}
                   >
                     APPLICATION PROCESS & TIMELINE
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    className="cursor-pointer text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
                     onClick={() => router.push('/recruiting/qa')}
                   >
                     Q&A
@@ -106,21 +106,21 @@ export default function QAPage() {
               </DropdownMenu>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/alumni-ventures")}
               >
                 ALUMNI VENTURES
               </Button>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/media")}
               >
                 MEDIA
               </Button>
               <Button
                 variant="ghost"
-                className="text-sm lg:text-base font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-3 py-2"
+                className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
                 onClick={() => router.push("/contact")}
               >
                 CONTACT
@@ -138,7 +138,7 @@ export default function QAPage() {
             <div className="mb-16 md:mb-20 text-center">
               <h2
                 id="qa-heading"
-                className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight"
+                className="text-[27px] md:text-[45px] lg:text-[54px] font-bold mb-6 md:mb-8 leading-tight"
               >
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   Q&A
@@ -149,7 +149,7 @@ export default function QAPage() {
 
             {/* Content Area - 나중에 작성할 영역 */}
             <div className="text-center py-24 md:py-32">
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-500 dark:text-white/50">
+              <p className="text-[13.5px] md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50">
                 내용은 추후 작성 예정입니다.
               </p>
             </div>
