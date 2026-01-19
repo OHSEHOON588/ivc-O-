@@ -36,7 +36,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-950 dark:via-gray-900 dark:to-slate-950 text-gray-900 dark:text-white transition-colors duration-500">
       {/* Responsive Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10" role="navigation" aria-label="Main navigation">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+        <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <div className="flex items-center">
@@ -144,83 +144,114 @@ export default function AboutPage() {
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
+          {/* Mobile Navigation Menu - 계층 구조로 항상 펼쳐진 상태 */}
           {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
-              <div className="flex flex-col gap-2">
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    const element = document.getElementById('about')
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' })
-                    }
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  INTRODUCTION
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/about/leadership')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  LEADERSHIP TEAM
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/recruiting/application-process')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  APPLICATION PROCESS & TIMELINE
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/recruiting/qa')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  Q&A
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/alumni-ventures')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  ALUMNI VENTURES
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/media')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  MEDIA
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => {
-                    router.push('/contact')
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  CONTACT
-                </Button>
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-2">
+              <div className="flex flex-col gap-0">
+                {/* ABOUT US 섹션 - 하위 메뉴 항상 펼쳐진 상태 */}
+                <div className="flex flex-col">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ABOUT US
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        const element = document.getElementById('about')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' })
+                        }
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      INTRODUCTION
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/about/leadership')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      LEADERSHIP TEAM
+                    </button>
+                  </div>
+                </div>
+
+                {/* RECRUITING 섹션 */}
+                <div className="flex flex-col border-t border-gray-200 dark:border-white/10 mt-1">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    RECRUITING
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        router.push('/recruiting/application-process')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      APPLICATION PROCESS & TIMELINE
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/recruiting/qa')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      Q&A
+                    </button>
+                  </div>
+                </div>
+
+                {/* 기타 메뉴 */}
+                <div className="flex flex-col border-t border-gray-200 dark:border-white/10 mt-1">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/alumni-ventures')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    ALUMNI VENTURES
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/media')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    MEDIA
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => {
+                      router.push('/contact')
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    CONTACT
+                  </Button>
+                </div>
               </div>
             </div>
           )}
@@ -230,25 +261,25 @@ export default function AboutPage() {
       {/* Main Content */}
       <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-24">
         {/* About Us Section with Introduction */}
-        <section id="about" className="py-8 md:py-24 relative" aria-labelledby="about-heading">
-          <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-            <div className="mb-8 md:mb-[60px] text-center">
+        <section id="about" className="py-4 md:py-24 relative" aria-labelledby="about-heading">
+          <div className="w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+            <div className="mb-4 md:mb-[60px] text-center">
               <h2
                 id="about-heading"
-                className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight"
+                className="text-xl sm:text-2xl md:text-[45px] lg:text-[54px] font-bold mb-2 md:mb-8 leading-tight"
               >
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   INTRODUCTION
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] mx-auto mb-8 md:mb-12" />
+              <div className="w-24 h-1 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] mx-auto mb-4 md:mb-12" />
             </div>
 
             {/* Introduction */}
-            <div className="mb-8 md:mb-[60px]">
+            <div className="mb-4 md:mb-[60px]">
               
-              <div className="relative">
-                {/* Floating Image - Background Style */}
+              <div className="relative flex flex-col md:block">
+                {/* Floating Image - Background Style (Desktop only) */}
                 <div 
                   className="hidden lg:block float-right ml-6 mb-3 relative z-0 w-[300px] h-[300px]"
                   style={{ 
@@ -268,42 +299,33 @@ export default function AboutPage() {
                 </div>
 
                 {/* Mobile Image */}
-                <div className="block lg:hidden mb-6 flex justify-center">
-                  <div className="relative w-[180px] h-[180px]">
+                <div className="block lg:hidden mb-3 flex justify-center">
+                  <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px]">
                     <Image
                       src="/images/traditional-logo-black.svg"
                       alt="IVC Traditional Logo"
                       width={600}
                       height={605}
-                      sizes="200px"
+                      sizes="(max-width: 640px) 120px, 150px"
                       className="w-full h-full object-contain opacity-80"
                       loading="lazy"
                     />
                   </div>
                 </div>
 
-                {/* Text Content - Flows around image */}
-                <div className="text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/80 leading-relaxed break-keep">
-                  <p className="mb-4 md:mb-[13.5px]">
-                    인하벤처클럽(IVC, Inha Venture Club)은<br />
-                    1997년, 대한민국 1세대 벤처기업 비트컴퓨터 창업자 조현정 회장에 의해 설립된<br />
-                    인하대학교 최초의 창업 동아리입니다.
+                {/* Text Content - 모바일 퍼스트 */}
+                <div className="w-full text-sm sm:text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-white/80 leading-relaxed">
+                  <p className="mb-2 md:mb-[13.5px]">
+                    인하벤처클럽(IVC, Inha Venture Club)은 1997년, 대한민국 1세대 벤처기업 비트컴퓨터 창업자 조현정 회장에 의해 설립된 인하대학교 최초의 창업 동아리입니다.
                   </p>
-                  <p className="mb-4 md:mb-[13.5px]">
-                    IVC는 단순한 창업 동아리를 넘어,<br />
-                    인하대학교 창업지원단에 소속된 직할 조직으로서 운영되고 있으며<br />
-                    현재는 인하대학교 내 최대 규모의 창업 커뮤니티로 자리매김하고 있습니다.
+                  <p className="mb-2 md:mb-[13.5px]">
+                    IVC는 단순한 창업 동아리를 넘어, 인하대학교 창업지원단에 소속된 직할 조직으로서 운영되고 있으며 현재는 인하대학교 내 최대 규모의 창업 커뮤니티로 자리매김하고 있습니다.
                   </p>
-                  <p className="mb-4 md:mb-[13.5px]">
-                    설립 이후 IVC는 아이디어 단계에 머무르지 않고,<br />
-                    문제 정의–해결–실행까지 이어지는 실전 중심의 창업 활동을 지향해 왔습니다.<br />
-                    이를 위해 정기 세미나, 프로젝트 기반 활동, 기업 연계 프로그램,<br />
-                    선·후배 간 네트워킹을 통해 실제 창업 경험과 역량을 축적할 수 있는 환경을 만들어가고 있습니다.
+                  <p className="mb-2 md:mb-[13.5px]">
+                    설립 이후 IVC는 아이디어 단계에 머무르지 않고, 문제 정의–해결–실행까지 이어지는 실전 중심의 창업 활동을 지향해 왔습니다. 이를 위해 정기 세미나, 프로젝트 기반 활동, 기업 연계 프로그램, 선·후배 간 네트워킹을 통해 실제 창업 경험과 역량을 축적할 수 있는 환경을 만들어가고 있습니다.
                   </p>
                   <p>
-                    IVC는 &apos;학생 창업가가 성장할 수 있는 가장 현실적인 커뮤니티&apos;를 목표로,<br />
-                    앞으로도 인하대학교 창업 생태계의 중심에서<br />
-                    도전과 실행을 이어가는 창업 인재들을 연결하고 지원해 나가고자 합니다.
+                    IVC는 &apos;학생 창업가가 성장할 수 있는 가장 현실적인 커뮤니티&apos;를 목표로, 앞으로도 인하대학교 창업 생태계의 중심에서 도전과 실행을 이어가는 창업 인재들을 연결하고 지원해 나가고자 합니다.
                   </p>
                 </div>
                 
@@ -313,15 +335,15 @@ export default function AboutPage() {
             </div>
 
             {/* Alumni Company Sales Image */}
-            <div className="mt-8 md:mt-[60px]">
-              <div className="w-full max-w-6xl mx-auto">
+            <div className="mt-4 md:mt-[60px]">
+              <div className="w-full max-w-screen-xl mx-auto">
                 <Image
                   src="/images/alumni-sales-2024.png"
                   alt="2024 Alumni 기업 매출 - 총 163,364,225,842 원"
                   width={900}
                   height={506}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 67.5vw, 900px"
-                  className="w-full h-auto object-contain rounded-lg max-w-[900px] mx-auto"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 95vw, (max-width: 1200px) 67.5vw, 900px"
+                  className="w-full h-auto object-contain rounded-lg mx-auto"
                   loading="lazy"
                   quality={70}
                   placeholder="blur"

@@ -360,40 +360,40 @@ export default function LunchBoxLanding() {
       </nav>
 
         {/* Creative Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 relative">
+        <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-16 relative pt-20 pb-12 md:pt-0 md:pb-0">
           {/* Morphing Circles/Squares - simplified with CSS variables */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] border border-gray-200 dark:border-white/5 transition-all duration-500 ease-out hw-accelerate"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] border border-gray-200 dark:border-white/5 transition-all duration-500 ease-out hw-accelerate"
             style={{
               borderRadius,
               transform: `translate(-50%, -50%) rotate(${rotation})`,
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[450px] lg:w-[600px] h-[300px] md:h-[450px] lg:h-[600px] border border-gray-200 dark:border-white/10 transition-all duration-500 ease-out hw-accelerate"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[450px] lg:w-[600px] h-[200px] sm:h-[300px] md:h-[450px] lg:h-[600px] border border-gray-200 dark:border-white/10 transition-all duration-500 ease-out hw-accelerate"
             style={{
               borderRadius,
               transform: `translate(-50%, -50%) rotate(${rotation === "0deg" ? "0deg" : `-${rotation}`})`,
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] lg:w-[400px] h-[200px] md:h-[300px] lg:h-[400px] border border-gray-300 dark:border-white/20 transition-all duration-500 ease-out hw-accelerate"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] border border-gray-300 dark:border-white/20 transition-all duration-500 ease-out hw-accelerate"
             style={{
               borderRadius,
               transform: `translate(-50%, -50%) rotate(${rotation === "0deg" ? "0deg" : `${Number.parseFloat(rotation) * 0.5}deg`})`,
             }}
           />
 
-          <div className="max-w-6xl mx-auto text-center relative">
+          <div className="w-full max-w-6xl mx-auto text-center relative flex flex-col items-center">
             <Badge
               variant="outline"
-              className="hidden md:inline-flex mb-8 md:mb-12 text-xs md:text-sm font-light border-gray-300 dark:border-white/20 text-gray-600 dark:text-white/80 px-3 md:px-4 py-1.5 md:py-2 items-center"
+              className="inline-flex mb-6 md:mb-12 text-xs md:text-sm font-light border-gray-300 dark:border-white/20 text-gray-600 dark:text-white/80 px-3 md:px-4 py-1.5 md:py-2 items-center"
             >
               <Sparkles className="w-3 h-3 mr-2" />
               창업? 더이상 어렵지 않아요
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
+            <h1 className="w-full text-3xl sm:text-4xl md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-4 sm:mb-6 md:mb-12 group cursor-default">
               <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500 mb-1">
                 inha venture
               </span>
@@ -402,16 +402,16 @@ export default function LunchBoxLanding() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-xl px-4">
+            <p className="w-full text-base sm:text-lg md:text-xl text-gray-700 dark:text-white/80 mb-6 sm:mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-4">
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
+            <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <Button
-                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-5 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl group flex items-center min-h-[44px]"
+                className="w-full sm:w-auto rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl group flex items-center justify-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
-                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-6 md:h-7 w-auto mr-2" />
+                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-5 sm:h-6 md:h-7 w-auto mr-2" />
                 클럽 시작하기
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
@@ -422,26 +422,26 @@ export default function LunchBoxLanding() {
 
         {/* Creative Call to Action */}
         <section
-          className="min-h-screen flex items-center justify-center relative py-24 md:py-32"
+          className="min-h-screen flex flex-col items-center justify-center relative py-16 sm:py-24 md:py-32"
           aria-labelledby="cta-heading"
         >
           {/* Final morphed circles - back to original state */}
           <div className="absolute inset-0 flex items-center justify-center -z-10">
-            <div className="w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] rounded-full border border-gray-200 dark:border-white/10 subtle-breathe" />
+            <div className="w-[250px] sm:w-[300px] md:w-[500px] lg:w-[600px] h-[250px] sm:h-[300px] md:h-[500px] lg:h-[600px] rounded-full border border-gray-200 dark:border-white/10 subtle-breathe" />
             <div
-              className="w-[400px] md:w-[650px] lg:w-[800px] h-[400px] md:h-[650px] lg:h-[800px] rounded-full border border-gray-100 dark:border-white/5 absolute subtle-breathe"
+              className="w-[350px] sm:w-[400px] md:w-[650px] lg:w-[800px] h-[350px] sm:h-[400px] md:h-[650px] lg:h-[800px] rounded-full border border-gray-100 dark:border-white/5 absolute subtle-breathe"
               style={{ animationDelay: "1s" }}
             />
             <div
-              className="w-[500px] md:w-[800px] lg:w-[1000px] h-[500px] md:h-[800px] lg:h-[1000px] rounded-full border border-gray-300 dark:border-white/3 absolute subtle-breathe"
+              className="w-[450px] sm:w-[500px] md:w-[800px] lg:w-[1000px] h-[450px] sm:h-[500px] md:h-[800px] lg:h-[1000px] rounded-full border border-gray-300 dark:border-white/3 absolute subtle-breathe"
               style={{ animationDelay: "2s" }}
             />
           </div>
 
-          <div className="max-w-4xl mx-auto text-center px-8 md:px-12 lg:px-16 relative z-10">
+          <div className="w-full max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-12 lg:px-16 relative z-10 flex flex-col items-center">
             <h2
               id="cta-heading"
-              className="text-3xl sm:text-4xl md:text-[52.5px] lg:text-[60px] font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
+              className="w-full text-2xl sm:text-3xl md:text-[52.5px] lg:text-[60px] font-bold mb-6 sm:mb-8 md:mb-16 leading-tight text-gray-900 dark:text-white"
             >
               Time to{" "}
               <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
@@ -449,18 +449,18 @@ export default function LunchBoxLanding() {
               </span>
               ?
             </h2>
-            <p className="text-lg sm:text-xl md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
+            <p className="w-full text-base sm:text-lg md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-8 sm:mb-12 md:mb-20 leading-relaxed">
               고민은 당신의 성공을 늦출 뿐입니다. 지금, 시작하세요.
             </p>
 
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
+            <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <Button
-                className="rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-2xl group flex items-center min-h-[44px]"
+                className="w-full sm:w-auto rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-2xl group flex items-center justify-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
-                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-7 md:h-8 w-auto mr-3" />
+                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-6 sm:h-7 md:h-8 w-auto mr-2 sm:mr-3" />
                 클럽 지원하기
-                <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="ml-2 sm:ml-2 md:ml-3 h-5 w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
           </div>
