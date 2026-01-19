@@ -56,16 +56,13 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* 모바일에서도 PC처럼 보이도록 최소 너비 강제 */
-    min-width: 1200px;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
   html {
-    /* 모바일에서도 PC처럼 보이도록 최소 너비 강제 */
-    min-width: 1200px;
+    /* 모바일 퍼스트 - 자연스러운 반응형 */
   }
 }
 
