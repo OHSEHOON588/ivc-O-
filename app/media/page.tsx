@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown, ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight } from "lucide-react"
+import { ChevronDown, ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
@@ -23,6 +23,7 @@ interface MediaCard {
 export default function MediaPage() {
   const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const itemsPerPage = 6
 
   // 미디어 카드 데이터 - 날짜별 폴더 구조 사용
@@ -119,8 +120,8 @@ export default function MediaPage() {
               </button>
             </div>
 
-            {/* Navigation Menu - 항상 표시 */}
-            <div className="flex items-center gap-6 lg:gap-8">
+            {/* Desktop Navigation Menu - 중앙 정렬 */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -199,17 +200,104 @@ export default function MediaPage() {
                 CONTACT
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white"
+              aria-label="메뉴 열기"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  INTRODUCTION
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about/leadership')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  LEADERSHIP TEAM
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/application-process')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  APPLICATION PROCESS & TIMELINE
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/qa')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  Q&A
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/alumni-ventures')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  ALUMNI VENTURES
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/media')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  MEDIA
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/contact')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 pt-16 md:pt-20 pb-24 md:pb-32">
-        <section className="py-12 md:py-16 lg:py-20">
+      <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
+        <section className="py-8 md:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Title */}
-            <div className="mb-16 md:mb-20 text-center">
-              <h1 className="text-[27px] md:text-[45px] lg:text-[54px] font-bold mb-6 md:mb-8 leading-tight">
+            <div className="mb-8 md:mb-20 text-center">
+              <h1 className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight">
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   MEDIA
                 </span>
@@ -218,7 +306,7 @@ export default function MediaPage() {
             </div>
 
             {/* Media Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
               {currentCards.map((card) => (
                 <div
                   key={card.id}
@@ -251,8 +339,8 @@ export default function MediaPage() {
                       }}
                     />
                     {/* Title Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4 md:p-5">
-                      <h3 className="text-white font-bold text-base md:text-lg lg:text-xl leading-tight line-clamp-2">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-3 md:p-5">
+                      <h3 className="text-white font-bold text-sm md:text-lg lg:text-xl leading-tight line-clamp-2">
                         {card.title}
                       </h3>
                     </div>

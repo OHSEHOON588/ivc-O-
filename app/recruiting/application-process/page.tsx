@@ -7,13 +7,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 export default function ApplicationProcessPage() {
   const router = useRouter()
   const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -46,8 +47,8 @@ export default function ApplicationProcessPage() {
               </button>
             </div>
 
-            {/* Navigation Menu - 항상 표시 */}
-            <div className="flex items-center gap-6 lg:gap-8">
+            {/* Desktop Navigation Menu - 중앙 정렬 */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -126,19 +127,106 @@ export default function ApplicationProcessPage() {
                 CONTACT
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white"
+              aria-label="메뉴 열기"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  INTRODUCTION
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about/leadership')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  LEADERSHIP TEAM
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/application-process')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  APPLICATION PROCESS & TIMELINE
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/qa')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  Q&A
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/alumni-ventures')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  ALUMNI VENTURES
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/media')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  MEDIA
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/contact')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 pt-16 md:pt-20 pb-24 md:pb-32">
+      <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
         {/* Application Process Section */}
-        <section id="application-process" className="py-24 md:py-32 relative" aria-labelledby="application-process-heading">
+        <section id="application-process" className="py-8 md:py-32 relative" aria-labelledby="application-process-heading">
           <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-            <div className="mb-16 md:mb-20 text-center">
+            <div className="mb-8 md:mb-20 text-center">
               <h2
                 id="application-process-heading"
-                className="text-[27px] md:text-[45px] lg:text-[54px] font-bold mb-6 md:mb-8 leading-tight"
+                className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight"
               >
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   APPLICATION PROCESS & TIMELINE
@@ -148,8 +236,8 @@ export default function ApplicationProcessPage() {
             </div>
 
             {/* Content Area - 나중에 작성할 영역 */}
-            <div className="text-center py-24 md:py-32">
-              <p className="text-[13.5px] md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50">
+            <div className="text-center py-12 md:py-32">
+              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50">
                 내용은 추후 작성 예정입니다.
               </p>
             </div>

@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown, ArrowLeft } from "lucide-react"
+import { ChevronDown, ArrowLeft, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { useRouter, useParams } from "next/navigation"
 import Image from "next/image"
@@ -16,6 +16,7 @@ export default function MediaDetailPage() {
   const router = useRouter()
   const params = useParams()
   const date = params.date as string
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // 날짜에 따른 제목 매핑
   const getTitle = (date: string) => {
@@ -55,8 +56,8 @@ export default function MediaDetailPage() {
               </button>
             </div>
 
-            {/* Navigation Menu - 항상 표시 */}
-            <div className="flex items-center gap-6 lg:gap-8">
+            {/* Desktop Navigation Menu - 중앙 정렬 */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -135,33 +136,120 @@ export default function MediaDetailPage() {
                 CONTACT
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white"
+              aria-label="메뉴 열기"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  INTRODUCTION
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about/leadership')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  LEADERSHIP TEAM
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/application-process')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  APPLICATION PROCESS & TIMELINE
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/qa')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  Q&A
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/alumni-ventures')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  ALUMNI VENTURES
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/media')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  MEDIA
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/contact')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 pt-16 md:pt-20 pb-24 md:pb-32">
-        <section className="py-12 md:py-16 lg:py-20">
+      <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
+        <section className="py-8 md:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Back Button */}
             <Button
               variant="ghost"
               onClick={() => router.push("/media")}
-              className="mb-8 flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+              className="mb-6 md:mb-8 flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm md:text-base"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
               <span>목록으로 돌아가기</span>
             </Button>
 
             {/* Title */}
-            <div className="mb-12 text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+            <div className="mb-8 md:mb-12 text-center">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                 {getTitle(date)}
               </h1>
             </div>
 
             {/* Images List - Vertical */}
-            <div className="flex flex-col gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col gap-4 md:gap-8 max-w-4xl mx-auto">
               {imageUrls.map((imageUrl, index) => (
                 <div
                   key={index}
@@ -177,6 +265,7 @@ export default function MediaDetailPage() {
                       className="w-full h-auto object-contain group-hover:opacity-95 transition-opacity duration-300"
                       loading="lazy"
                       quality={70}
+                      priority={index === 0}
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       onError={(e) => {
@@ -194,13 +283,13 @@ export default function MediaDetailPage() {
             </div>
 
             {/* Back Button - Bottom */}
-            <div className="mt-12 flex justify-center">
+            <div className="mt-8 md:mt-12 flex justify-center">
               <Button
                 variant="ghost"
                 onClick={() => router.push("/media")}
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm md:text-base"
               >
-                <ArrowLeft className="w-5 h-5" />
+                <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
                 <span>목록으로 돌아가기</span>
               </Button>
             </div>

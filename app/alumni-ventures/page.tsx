@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import Image from "next/image"
@@ -21,6 +21,7 @@ interface AlumniCard {
 
 export default function AlumniVenturesPage() {
   const router = useRouter()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Alumni Ventures 데이터 - 이미지와 링크를 포함
   // 사용자가 나중에 이미지와 링크를 추가할 예정
@@ -115,8 +116,8 @@ export default function AlumniVenturesPage() {
               </button>
             </div>
 
-            {/* Navigation Menu - 항상 표시 */}
-            <div className="flex items-center gap-6 lg:gap-8">
+            {/* Desktop Navigation Menu - 중앙 정렬 */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -195,17 +196,104 @@ export default function AlumniVenturesPage() {
                 CONTACT
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white"
+              aria-label="메뉴 열기"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  INTRODUCTION
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about/leadership')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  LEADERSHIP TEAM
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/application-process')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  APPLICATION PROCESS & TIMELINE
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/qa')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  Q&A
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/alumni-ventures')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  ALUMNI VENTURES
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/media')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  MEDIA
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/contact')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 pt-16 md:pt-20 pb-24 md:pb-32">
-        <section className="py-12 md:py-16 lg:py-20">
+      <main className="relative z-10 pt-16 md:pt-20 pb-12 md:pb-32">
+        <section className="py-8 md:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Title */}
-            <div className="mb-16 md:mb-20 text-center">
-              <h1 className="text-[27px] md:text-[45px] lg:text-[54px] font-bold mb-6 md:mb-8 leading-tight">
+            <div className="mb-8 md:mb-20 text-center">
+              <h1 className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight">
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   ALUMNI VENTURES
                 </span>
@@ -214,7 +302,7 @@ export default function AlumniVenturesPage() {
             </div>
 
             {/* Alumni Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
               {alumniCards.map((card) => (
                 <a
                   key={card.id}
@@ -250,7 +338,7 @@ export default function AlumniVenturesPage() {
                     />
                     {/* Hover Overlay with Company Name */}
                     <div className="absolute inset-0 bg-black/60 dark:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white text-lg md:text-xl font-semibold text-center px-4">
+                      <span className="text-white text-sm md:text-xl font-semibold text-center px-4">
                         {card.name}
                       </span>
                     </div>

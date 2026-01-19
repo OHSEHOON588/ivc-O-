@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ArrowRight, Sparkles, ChevronDown } from "lucide-react"
+import { ArrowRight, Sparkles, ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
 
@@ -22,6 +22,7 @@ export default function LunchBoxLanding() {
   const [showMilestonesModal, setShowMilestonesModal] = useState(false)
   const [showImageModal, setShowImageModal] = useState(false)
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Check system preference on initial load
   useEffect(() => {
@@ -187,8 +188,8 @@ export default function LunchBoxLanding() {
                 </button>
               </div>
 
-              {/* Navigation Menu - 항상 표시 */}
-              <div className="flex items-center gap-6 lg:gap-8">
+              {/* Desktop Navigation Menu - 중앙 정렬 */}
+              <div className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button
@@ -267,9 +268,96 @@ export default function LunchBoxLanding() {
                   CONTACT
                 </Button>
               </div>
-            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white"
+              aria-label="메뉴 열기"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
-        </nav>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-white/10 py-4">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  INTRODUCTION
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/about/leadership')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  LEADERSHIP TEAM
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/application-process')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  APPLICATION PROCESS & TIMELINE
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/recruiting/qa')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  Q&A
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/alumni-ventures')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  ALUMNI VENTURES
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/media')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  MEDIA
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-base font-medium text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  onClick={() => {
+                    router.push('/contact')
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
 
         {/* Creative Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 relative">
@@ -305,7 +393,7 @@ export default function LunchBoxLanding() {
               창업? 더이상 어렵지 않아요
             </Badge>
 
-            <h1 className="text-[37.5px] sm:text-[45px] md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
+            <h1 className="text-4xl sm:text-5xl md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-6 sm:mb-8 md:mb-12 group cursor-default">
               <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500 mb-1">
                 inha venture
               </span>
@@ -314,7 +402,7 @@ export default function LunchBoxLanding() {
               </span>
             </h1>
 
-            <p className="text-[12px] sm:text-[13.5px] text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-[15px] px-4">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-white/80 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light md:text-xl px-4">
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
@@ -353,7 +441,7 @@ export default function LunchBoxLanding() {
           <div className="max-w-4xl mx-auto text-center px-8 md:px-12 lg:px-16 relative z-10">
             <h2
               id="cta-heading"
-              className="text-[22.5px] sm:text-[30px] md:text-[52.5px] lg:text-[60px] font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
+              className="text-3xl sm:text-4xl md:text-[52.5px] lg:text-[60px] font-bold mb-8 sm:mb-12 md:mb-16 leading-tight text-gray-900 dark:text-white px-4"
             >
               Time to{" "}
               <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
@@ -361,7 +449,7 @@ export default function LunchBoxLanding() {
               </span>
               ?
             </h2>
-            <p className="text-[13.5px] sm:text-[15px] md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-[18px] lg:text-[22.5px] text-gray-700 dark:text-white/70 mb-12 sm:mb-16 md:mb-20 leading-relaxed px-4">
               고민은 당신의 성공을 늦출 뿐입니다. 지금, 시작하세요.
             </p>
 
