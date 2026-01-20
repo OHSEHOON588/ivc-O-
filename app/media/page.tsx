@@ -148,6 +148,12 @@ export default function MediaPage() {
                   >
                     LEADERSHIP TEAM
                   </DropdownMenuItem>
+                  <DropdownMenuItem
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 whitespace-nowrap"
+                    onClick={() => router.push('/about/promotional-video')}
+                  >
+                    PROMOTIONAL VIDEO
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
@@ -165,7 +171,7 @@ export default function MediaPage() {
                   className="w-56 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
                 >
                   <DropdownMenuItem
-                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 whitespace-nowrap"
                     onClick={() => router.push('/recruiting/application-process')}
                   >
                     APPLICATION PROCESS & TIMELINE
@@ -185,6 +191,62 @@ export default function MediaPage() {
               >
                 ALUMNI VENTURES
               </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
+                  >
+                    PROGRAM
+                    <ChevronDown className="h-3 w-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  className="w-36 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
+                >
+                  <DropdownMenuItem
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    onClick={() => router.push('/program/track1')}
+                  >
+                    TRACK 1
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    onClick={() => router.push('/program/track2')}
+                  >
+                    TRACK 2
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
+                  >
+                    CREWS
+                    <ChevronDown className="h-3 w-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
+                >
+                  <DropdownMenuItem
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
+                    onClick={() => router.push('/crews/google')}
+                  >
+                    GGOOGLE
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 whitespace-nowrap"
+                    onClick={() => router.push('/crews/miracle-morning')}
+                  >
+                    MIRACLE MORNING
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Button
                 variant="ghost"
                 className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
@@ -295,6 +357,66 @@ export default function MediaPage() {
                   >
                     ALUMNI VENTURES
                   </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PROGRAM
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        router.push('/program/track1')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      TRACK 1
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/program/track2')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      TRACK 2
+                    </button>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    CREWS
+                  </Button>
+                  {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
+                  <div className="pl-8 mb-2 space-y-1">
+                    <button
+                      onClick={() => {
+                        router.push('/crews/google')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      GGOOGLE
+                    </button>
+                    <button
+                      onClick={() => {
+                        router.push('/crews/miracle-morning')
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className="w-full flex items-center justify-start text-sm text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-4 min-h-[44px] rounded-md transition-colors"
+                    >
+                      <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
+                      MIRACLE MORNING
+                    </button>
+                  </div>
                   <Button
                     variant="ghost"
                     className="w-full justify-start text-base font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-3 px-4 min-h-[48px]"
