@@ -77,7 +77,7 @@ export default function LunchBoxLanding() {
   const { borderRadius, rotation } = getShapeProgress()
 
   const googleFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSe1eTaWQaWvbBSqIqmrAzpAxGccGhlYLE1pQqBnrmkIEkbYpA/viewform?usp=dialog"
+    "https://docs.google.com/forms/d/e/1FAIpQLSfw9mNxf_smpqGR0AUPbM1cyXcCGexGqimgSyghEmG2R6BaQA/viewform"
 
   return (
     <div

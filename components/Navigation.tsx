@@ -135,34 +135,13 @@ export default function Navigation() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5 flex items-center gap-[3px]"
-                >
-                  CREWS
-                  <ChevronDown className="h-3 w-3" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="start"
-                className="w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-gray-200 dark:border-white/10 shadow-lg"
-              >
-                <DropdownMenuItem
-                  className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5"
-                  onClick={() => router.push('/crews/google')}
-                >
-                  GGOOGLE
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  className="cursor-pointer text-xs text-gray-700 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 whitespace-nowrap"
-                  onClick={() => router.push('/crews/miracle-morning')}
-                >
-                  MIRACLE MORNING
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button
+              variant="ghost"
+              className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
+              onClick={() => router.push("/crews")}
+            >
+              CREWS
+            </Button>
             <Button
               variant="ghost"
               className="text-xs lg:text-sm font-medium text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white hover:bg-transparent transition-all duration-300 px-[9px] py-1.5"
@@ -321,33 +300,13 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   className="w-full justify-start text-[13px] font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-3 min-h-[44px]"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    router.push('/crews')
+                    setIsMobileMenuOpen(false)
+                  }}
                 >
                   CREWS
                 </Button>
-                {/* 하위 메뉴 - 항상 표시, 들여쓰기, 글머리 기호 */}
-                <div className="pl-8 mb-2 space-y-1">
-                  <button
-                    onClick={() => {
-                      router.push('/crews/google')
-                      setIsMobileMenuOpen(false)
-                    }}
-                    className="w-full flex items-center justify-start text-[12px] text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-1.5 px-3 min-h-[40px] rounded-md transition-colors"
-                  >
-                    <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
-                    GGOOGLE
-                  </button>
-                  <button
-                    onClick={() => {
-                      router.push('/crews/miracle-morning')
-                      setIsMobileMenuOpen(false)
-                    }}
-                    className="w-full flex items-center justify-start text-[12px] text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-1.5 px-3 min-h-[40px] rounded-md transition-colors whitespace-nowrap"
-                  >
-                    <span className="mr-2 text-gray-400 dark:text-white/40">•</span>
-                    MIRACLE MORNING
-                  </button>
-                </div>
                 <Button
                   variant="ghost"
                   className="w-full justify-start text-[13px] font-medium text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-white/5 py-2 px-3 min-h-[44px]"
