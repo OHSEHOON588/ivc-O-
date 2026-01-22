@@ -15,10 +15,10 @@ export default function ApplicationProcessPage() {
           aria-labelledby="application-process-heading"
         >
           <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12">
-            <div className="mb-8 md:mb-20 text-center">
+            <div className="mb-8 md:mb-20 text-center px-2">
               <h2
                 id="application-process-heading"
-                className="text-3xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight"
+                className="text-xl md:text-[45px] lg:text-[54px] font-bold mb-4 md:mb-8 leading-tight"
               >
                 <span className="bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] bg-clip-text text-transparent">
                   APPLICATION PROCESS & TIMELINE
@@ -30,8 +30,8 @@ export default function ApplicationProcessPage() {
             {/* Hero Section */}
             <section className="py-8 md:py-16 relative">
               <div className="mb-8 md:mb-16 text-center">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 leading-tight">
-                  <span className="text-gray-900 dark:text-white whitespace-nowrap">
+                <h1 className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 leading-tight px-2">
+                  <span className="text-gray-900 dark:text-white md:whitespace-nowrap">
                     IVC 30기 (2026년 1학기) 리크루팅 안내
                   </span>
                 </h1>
@@ -56,11 +56,11 @@ export default function ApplicationProcessPage() {
             {/* 모집 대상 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <Users className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
                     모집 대상
                   </h2>
                 </div>
@@ -78,11 +78,11 @@ export default function ApplicationProcessPage() {
             {/* 활동 일시 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <Calendar className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
                     활동 일시
                   </h2>
                 </div>
@@ -118,11 +118,11 @@ export default function ApplicationProcessPage() {
             {/* 서류 지원 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <FileText className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
                     서류 지원
                   </h2>
                 </div>
@@ -150,11 +150,11 @@ export default function ApplicationProcessPage() {
             {/* 면접 및 합격자 발표 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <MessageSquare className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
                     면접 및 합격자 발표
                   </h2>
                 </div>
@@ -177,12 +177,12 @@ export default function ApplicationProcessPage() {
             {/* 오리엔테이션 및 개강총회 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <Presentation className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
-                    오리엔테이션 및 개강총회 <span className="text-base md:text-lg text-gray-700 dark:text-white/80">(필수 참여)</span>
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                    오리엔테이션 및 개강총회 <span className="text-sm md:text-lg text-gray-700 dark:text-white/80">(필수 참여)</span>
                   </h2>
                 </div>
                 <div className="pl-0 md:pl-20 space-y-4">
@@ -204,12 +204,12 @@ export default function ApplicationProcessPage() {
             {/* 팀빌딩 캠프 */}
             <section className="py-4 md:py-6 relative">
               <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-10 lg:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
+                <div className="flex items-start md:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#dc143c]/10 to-[#dc143c]/20 dark:from-[#dc143c]/20 dark:to-[#dc143c]/30 flex items-center justify-center border border-gray-200 dark:border-white/10">
                     <Users className="w-6 h-6 md:w-7 md:h-7 text-[#dc143c]" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
-                    팀빌딩 캠프 <span className="text-base md:text-lg text-gray-700 dark:text-white/80">(필수 참여)</span>
+                  <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                    팀빌딩 캠프 <span className="text-sm md:text-lg text-gray-700 dark:text-white/80">(필수 참여)</span>
                   </h2>
                 </div>
                 <div className="pl-0 md:pl-20 space-y-4">
