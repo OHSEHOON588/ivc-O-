@@ -45,7 +45,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-lg">
                   <Image
-                    src="/images/naver-map.jpg"
+                    src="/images/naver-map.png"
                     alt="인하대학교 위치 지도"
                     width={600}
                     height={450}
