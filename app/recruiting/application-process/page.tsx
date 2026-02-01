@@ -101,7 +101,7 @@ export default function ApplicationProcessPage() {
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start gap-2">
                     <span className="text-base md:text-lg font-semibold text-gray-900 dark:text-white min-w-[120px]">팀빌딩:</span>
-                    <span className="text-base md:text-lg text-gray-700 dark:text-white/80">3/7(토, 1주차) 팀빌딩 및 팀 별 회의</span>
+                    <span className="text-base md:text-lg text-gray-700 dark:text-white/80">3/19(목, 3주차) 팀빌딩 및 팀 별 회의</span>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start gap-2">
                     <span className="text-base md:text-lg font-semibold text-gray-900 dark:text-white min-w-[120px]">비정기 활동:</span>
@@ -217,7 +217,7 @@ export default function ApplicationProcessPage() {
                     <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#dc143c] mt-1 flex-shrink-0" />
                     <div>
                       <p className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                        3월 7일 (토) 13:00~18:00 60주년 기념관 B1 월천홀
+                        3월 19일 (목) 19:00~21:00 60주년 기념관 B1 월천홀
                       </p>
                       <p className="text-base md:text-lg text-gray-700 dark:text-white/80 leading-relaxed">
                         IVC 활동의 시작을 함께 팀원을 구성하는 핵심 프로그램으로, 팀빌딩과 문제 해결 중심의 워크숍이 진행됩니다.
