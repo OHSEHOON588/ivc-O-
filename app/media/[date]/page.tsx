@@ -27,9 +27,26 @@ export default function MediaDetailPage() {
     return titleMap[date] || date
   }
 
-  // 이미지 경로 생성 (1.jpg부터 최대 10개까지 확인)
+  // 날짜별 실제 이미지 개수 매핑 (404 에러 방지)
+  const getImageCount = (date: string): number => {
+    const countMap: { [key: string]: number } = {
+      "2025-09-11": 4,
+      "2025-09-20": 4,
+      "2025-09-25": 4,
+      "2025-10-02": 4,
+      "2025-10-30": 4, // 5.jpg부터 10.jpg까지는 없으므로 4개만
+      "2025-11-06": 4,
+      "2025-11-15": 4,
+      "2025-11-20": 4,
+      "2025-11-27": 4,
+    }
+    return countMap[date] || 4 // 기본값 4개
+  }
+
+  // 이미지 경로 생성 (실제 존재하는 이미지만)
+  const imageCount = getImageCount(date)
   const imageUrls: string[] = []
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= imageCount; i++) {
     imageUrls.push(`/images/media/${date}/${i}.jpg`)
   }
 
@@ -73,7 +90,7 @@ export default function MediaDetailPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 900px"
                       className="w-full h-auto object-contain group-hover:opacity-95 transition-opacity duration-300"
                       priority
-                      quality={70}
+                      quality={75}
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       onError={(e) => {

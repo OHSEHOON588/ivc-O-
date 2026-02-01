@@ -182,7 +182,7 @@ export default function Track2LandingPage() {
                               width={60}
                               height={60}
                               className="max-w-full max-h-full object-contain"
-                              quality={70}
+                              quality={75}
                             />
                           </div>
                           <div className="mt-3 text-center">

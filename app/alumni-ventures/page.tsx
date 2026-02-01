@@ -14,18 +14,18 @@ export default function AlumniVenturesPage() {
   // Alumni Ventures 데이터 - 이미지와 링크를 포함
   // 사용자가 나중에 이미지와 링크를 추가할 예정
   const alumniCards: AlumniCard[] = [
-    { id: 1, name: "비트컴퓨터", imageUrl: "/images/alumni-ventures/1.png", link: "https://www.bit.kr/" },
-    { id: 2, name: "와이즈플래닛컴퍼니", imageUrl: "/images/alumni-ventures/2.png", link: "https://wplanet.co.kr/" },
-    { id: 3, name: "퓨처 디자이너", imageUrl: "/images/alumni-ventures/3.png", link: "https://futuredesigners.kr/" },
-    { id: 4, name: "애즈위메이크", imageUrl: "/images/alumni-ventures/4.png", link: "https://www.aswemake.com/" },
-    { id: 5, name: "프라우드넷", imageUrl: "/images/alumni-ventures/5.png", link: "https://proudnet.com/" },
-    { id: 6, name: "오렌지랩", imageUrl: "/images/alumni-ventures/6.png", link: "https://www.orangelab.co.kr/" },
-    { id: 7, name: "아템포", imageUrl: "/images/alumni-ventures/7.png", link: "https://en.atempo.kr/" },
-    { id: 8, name: "수퍼트리", imageUrl: "/images/alumni-ventures/8.png", link: "https://supertree.co/" },
-    { id: 9, name: "라이프스퀘어", imageUrl: "/images/alumni-ventures/9.png", link: "https://lifesquare.kr/" },
-    { id: 10, name: "러닝라이프", imageUrl: "/images/alumni-ventures/10.png", link: "https://rife.kr/" },
-    { id: 11, name: "정리중독", imageUrl: "/images/alumni-ventures/11.png", link: "https://smartstore.naver.com/thinkhaus/for-you?cp=1" },
-    { id: 12, name: "토타로", imageUrl: "/images/alumni-ventures/12.png", link: "https://www.totaro.co.kr/" },
+    { id: 1, name: "비트컴퓨터", imageUrl: "/images/alumni-ventures/1.jpg", link: "https://www.bit.kr/" },
+    { id: 2, name: "와이즈플래닛컴퍼니", imageUrl: "/images/alumni-ventures/2.jpg", link: "https://wplanet.co.kr/" },
+    { id: 3, name: "퓨처 디자이너", imageUrl: "/images/alumni-ventures/3.jpg", link: "https://futuredesigners.kr/" },
+    { id: 4, name: "애즈위메이크", imageUrl: "/images/alumni-ventures/4.jpg", link: "https://www.aswemake.com/" },
+    { id: 5, name: "프라우드넷", imageUrl: "/images/alumni-ventures/5.jpg", link: "https://proudnet.com/" },
+    { id: 6, name: "오렌지랩", imageUrl: "/images/alumni-ventures/6.jpg", link: "https://www.orangelab.co.kr/" },
+    { id: 7, name: "아템포", imageUrl: "/images/alumni-ventures/7.jpg", link: "https://en.atempo.kr/" },
+    { id: 8, name: "수퍼트리", imageUrl: "/images/alumni-ventures/8.jpg", link: "https://supertree.co/" },
+    { id: 9, name: "라이프스퀘어", imageUrl: "/images/alumni-ventures/9.jpg", link: "https://lifesquare.kr/" },
+    { id: 10, name: "러닝라이프", imageUrl: "/images/alumni-ventures/10.jpg", link: "https://rife.kr/" },
+    { id: 11, name: "정리중독", imageUrl: "/images/alumni-ventures/11.jpg", link: "https://smartstore.naver.com/thinkhaus/for-you?cp=1" },
+    { id: 12, name: "토타로", imageUrl: "/images/alumni-ventures/12.jpg", link: "https://www.totaro.co.kr/" },
   ]
 
   return (
@@ -64,7 +64,7 @@ export default function AlumniVenturesPage() {
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                       className="object-contain group-hover:scale-105 transition-transform duration-300"
                       priority
-                      quality={70}
+                      quality={75}
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       onError={(e) => {
