@@ -28,7 +28,7 @@ export default function CrewsPage() {
                 {/* 인용구 */}
                 <blockquote className="text-center">
                   <p className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 dark:text-white leading-relaxed">
-                    창업의 진심인 자들의 진실된 연구소
+                    창업에 진심인 자들의 진실된 연구소
                   </p>
                   <p className="text-lg md:text-xl lg:text-2xl font-medium text-gray-700 dark:text-gray-300 mt-3 italic leading-relaxed">
                     "우리가 진짜로 만들고 싶은 세상에 대해, 끝까지 이야기하는 곳."
@@ -43,7 +43,7 @@ export default function CrewsPage() {
                   </h3>
                   <div className="pl-6 md:pl-8 space-y-3 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
                     <p>
-                      SL(Sincere Lab)는 <strong className="text-gray-900 dark:text-white">'창업의 진심인 자들'</strong>이 모여, 각자가 꿈꾸는 창업의 방향성과 삶의 목표를 끈질기게 파고드는 인하벤처클럽의 창업 방향성 연구 소모임입니다.
+                      SL(Sincere Lab)는 <strong className="text-gray-900 dark:text-white">'창업에 진심인 자들'</strong>이 모여, 각자가 꿈꾸는 창업의 방향성과 삶의 목표를 끈질기게 파고드는 인하벤처클럽의 창업 방향성 연구 소모임입니다.
                     </p>
                     <p>
                       아이템보다 먼저 '나'와 '방향'을 설계하는 것을 중요하게 여기며, 시장 트렌드에 휩쓸리기보다 내가 왜, 무엇을, 어떻게 만들고 싶은지를 차분히 검증하는 것을 목표로 합니다.
