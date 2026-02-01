@@ -9,9 +9,14 @@ const nextConfig = {
   images: {
     // Vercel에서 자동 이미지 최적화 활성화
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    // 모바일 우선으로 크기 최적화
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    // 캐시 시간 증가로 재요청 감소
+    minimumCacheTTL: 31536000, // 1년
+    // 이미지 최적화 품질 설정
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // 빌드 성능 최적화
   experimental: {

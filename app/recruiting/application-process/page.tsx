@@ -2,6 +2,7 @@
 
 import Navigation from "@/components/Navigation"
 import { Calendar, Users, FileText, MessageSquare, GraduationCap, MapPin, Presentation } from "lucide-react"
+import Image from "next/image"
 
 export default function ApplicationProcessPage() {
   return (
@@ -43,12 +44,21 @@ export default function ApplicationProcessPage() {
                 </p>
               </div>
 
-              {/* Group Photo Placeholder */}
+              {/* Group Photo */}
               <div className="mb-12 md:mb-20 text-center">
-                <div className="w-full max-w-4xl mx-auto aspect-video bg-gray-200 dark:bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-300 dark:border-white/10">
-                  <p className="text-gray-500 dark:text-white/50 text-sm md:text-base">
-                    단체사진 (1월 30일 사진 찍고 업로드 예정)
-                  </p>
+                <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-300 dark:border-white/10 shadow-lg">
+                  <Image
+                    src="/images/Recruting_group_photo.png"
+                    alt="IVC 30기 단체사진"
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                  />
                 </div>
               </div>
             </section>
