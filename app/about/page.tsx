@@ -44,7 +44,7 @@ export default function AboutPage() {
                     height={605}
                     sizes="(max-width: 1024px) 200px, 600px"
                     className="w-full h-full object-contain"
-                    loading="lazy"
+                    priority
                   />
                 </div>
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
                       height={605}
                       sizes="(max-width: 640px) 120px, 150px"
                       className="w-full h-full object-contain opacity-80"
-                      loading="lazy"
+                      priority
                     />
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
                   height={506}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 95vw, (max-width: 1200px) 67.5vw, 900px"
                   className="w-full h-auto object-contain rounded-lg mx-auto"
-                  loading="lazy"
+                  priority
                   quality={70}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
