@@ -81,14 +81,13 @@ export default function MediaDetailPage() {
                   key={index}
                   className="relative w-full rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-white/10 shadow-md hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="relative w-full" style={{ aspectRatio: "auto" }}>
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <Image
                       src={imageUrl}
                       alt={`${getTitle(date)} - 이미지 ${index + 1}`}
-                      width={900}
-                      height={600}
+                      fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 900px"
-                      className="w-full h-auto object-contain group-hover:opacity-95 transition-opacity duration-300"
+                      className="object-cover group-hover:opacity-95 transition-opacity duration-300"
                       priority
                       quality={75}
                       placeholder="blur"

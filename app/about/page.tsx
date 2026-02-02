@@ -1,6 +1,5 @@
 "use client"
 
-// Temporary line for git commit test
 import Image from "next/image"
 import Navigation from "@/components/Navigation"
 
