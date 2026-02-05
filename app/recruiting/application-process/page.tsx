@@ -48,7 +48,7 @@ export default function ApplicationProcessPage() {
               <div className="mb-12 md:mb-20 text-center">
                 <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-300 dark:border-white/10 shadow-lg">
                   <Image
-                    src="/images/Recruting_group_photo.png"
+                    src="/images/Recruting_group_photo.jpg"
                     alt="IVC 30기 단체사진"
                     width={1200}
                     height={800}

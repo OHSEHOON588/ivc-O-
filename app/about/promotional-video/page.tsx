@@ -26,10 +26,17 @@ export default function PromotionalVideoPage() {
               <div className="w-24 h-1 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] mx-auto mb-8 md:mb-12" />
             </div>
 
-            <div className="text-center py-12 md:py-32">
-              <p className="text-base md:text-[15px] lg:text-[18px] text-gray-500 dark:text-white/50 leading-[1.8] sm:leading-relaxed md:leading-relaxed break-words">
-                내용은 추후 작성 예정입니다.
-              </p>
+            {/* YouTube Video Embed */}
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-white/10">
+                <iframe
+                  src="https://www.youtube.com/embed/AsGcXsfskXM"
+                  title="인하벤처클럽 홍보 영상"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              </div>
             </div>
           </div>
         </section>

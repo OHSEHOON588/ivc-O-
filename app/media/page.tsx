@@ -14,7 +14,7 @@ interface MediaCard {
   date: string
   imageUrl: string
 }
-//git commit
+
 export default function MediaPage() {
   const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1)
