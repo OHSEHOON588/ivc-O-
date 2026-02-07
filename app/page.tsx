@@ -195,7 +195,7 @@ export default function LunchBoxLanding() {
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
                 <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-5 sm:h-6 md:h-7 w-auto mr-2" />
-                클럽 시작하기
+                지원하기
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
@@ -242,7 +242,7 @@ export default function LunchBoxLanding() {
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
                 <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-6 sm:h-7 md:h-8 w-auto mr-2 sm:mr-3" />
-                클럽 지원하기
+                지원하기
                 <ArrowRight className="ml-2 sm:ml-2 md:ml-3 h-5 w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
