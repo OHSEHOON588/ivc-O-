@@ -12,12 +12,12 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: '인하벤처클럽 IVC | 인하대학교 중앙 창업동아리',
+  title: '인하벤처클럽 IVC | 인하대학교 창업동아리',
   description: '인하대학교 No.1 중앙 창업동아리 인하벤처클럽(IVC) 공식 웹사이트입니다. 창업에 열정이 있는 인하대 학우들을 기다립니다.',
   keywords: ['인하벤처클럽', 'IVC', '인하대 창업', '인하대학교 동아리', '인하벤처', '인하대학교', '창업동아리', '인하대 중앙동아리'],
   generator: 'Next.js',
   openGraph: {
-    title: '인하벤처클럽 IVC | 인하대학교 중앙 창업동아리',
+    title: '인하벤처클럽 IVC | 인하대학교 창업동아리',
     description: '인하대학교 No.1 중앙 창업동아리 인하벤처클럽(IVC) 공식 웹사이트입니다. 창업에 열정이 있는 인하대 학우들을 기다립니다.',
     type: 'website',
     locale: 'ko_KR',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '인하벤처클럽 IVC | 인하대학교 중앙 창업동아리',
+    title: '인하벤처클럽 IVC | 인하대학교 창업동아리',
     description: '인하대학교 No.1 중앙 창업동아리 인하벤처클럽(IVC) 공식 웹사이트입니다.',
   },
   icons: {
