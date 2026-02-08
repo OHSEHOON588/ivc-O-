@@ -66,7 +66,7 @@ export default function Track2LandingPage() {
             >
               <Image
                 src="/images/ivc-logo-black.svg"
-                alt="IVC Logo"
+                alt="인하벤처클럽 IVC 로고"
                 width={36}
                 height={36}
                 className="h-full w-full object-contain rounded-xl"

@@ -30,7 +30,7 @@ export default function LeadershipPage() {
               <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-300 dark:border-white/10 shadow-lg">
                 <Image
                   src="/images/LEADERSHIP TEAM/LeaderShipTeam_group_photo.jpg"
-                  alt="IVC Leadership Team 단체사진"
+                  alt="인하벤처클럽 IVC 리더십 팀 단체사진"
                   width={1200}
                   height={800}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"

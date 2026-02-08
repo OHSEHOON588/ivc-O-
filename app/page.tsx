@@ -177,6 +177,7 @@ export default function LunchBoxLanding() {
             </Badge>
 
             <h1 className="w-full text-3xl sm:text-4xl md:text-[7.5rem] lg:text-[9rem] font-bold leading-tight sm:leading-none tracking-tighter mb-4 sm:mb-6 md:mb-12 group cursor-default">
+              <span className="sr-only">인하벤처클럽 IVC</span>
               <span className="block text-gray-900 dark:text-white group-hover:tracking-wide transition-all duration-500 mb-1">
                 inha venture
               </span>
@@ -194,7 +195,7 @@ export default function LunchBoxLanding() {
                 className="w-full sm:w-auto rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl group flex items-center justify-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
-                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-5 sm:h-6 md:h-7 w-auto mr-2" />
+                <img src="/images/ivc-logo.svg" alt="인하벤처클럽 IVC 로고" className="h-5 sm:h-6 md:h-7 w-auto mr-2" />
                 지원하기
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
@@ -241,7 +242,7 @@ export default function LunchBoxLanding() {
                 className="w-full sm:w-auto rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-2xl group flex items-center justify-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
               >
-                <img src="/images/ivc-logo.svg" alt="IVC Logo" className="h-6 sm:h-7 md:h-8 w-auto mr-2 sm:mr-3" />
+                <img src="/images/ivc-logo.svg" alt="인하벤처클럽 IVC 로고" className="h-6 sm:h-7 md:h-8 w-auto mr-2 sm:mr-3" />
                 지원하기
                 <ArrowRight className="ml-2 sm:ml-2 md:ml-3 h-5 w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>

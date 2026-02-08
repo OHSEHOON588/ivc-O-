@@ -39,7 +39,7 @@ export default function AboutPage() {
                 >
                   <Image
                     src="/images/traditional-logo-black.svg"
-                    alt="IVC Traditional Logo"
+                    alt="인하벤처클럽 IVC 전통 로고"
                     width={600}
                     height={605}
                     sizes="(max-width: 1024px) 200px, 600px"
@@ -53,7 +53,7 @@ export default function AboutPage() {
                   <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px]">
                     <Image
                       src="/images/traditional-logo-black.svg"
-                      alt="IVC Traditional Logo"
+                      alt="인하벤처클럽 IVC 전통 로고"
                       width={600}
                       height={605}
                       sizes="(max-width: 640px) 120px, 150px"
