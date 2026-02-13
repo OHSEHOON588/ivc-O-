@@ -139,79 +139,77 @@ export default function ProgramPage() {
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
                     Track 2 - SL (Sincere Lab)
                   </h3>
-                  
-                  {/* 인용구 */}
-                  <blockquote className="text-center">
-                    <p className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 dark:text-white leading-relaxed">
-                      창업에 진심인 자들의 진실된 연구소
-                    </p>
-                    <p className="text-lg md:text-xl lg:text-2xl font-medium text-gray-700 dark:text-gray-300 mt-3 italic leading-relaxed">
-                      "우리가 진짜로 만들고 싶은 세상에 대해, 끝까지 이야기하는 곳."
-                    </p>
-                  </blockquote>
 
                   {/* 모임 소개 */}
                   <div className="space-y-3 md:space-y-4">
-                    <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                      <span className="text-[#dc143c]">•</span>
-                      모임 소개
-                    </h4>
-                    <div className="pl-6 md:pl-8 space-y-3 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
+                    <div className="text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
                       <p>
-                        SL(Sincere Lab)는 <strong className="text-gray-900 dark:text-white">'창업에 진심인 자들'</strong>이 모여, 각자가 꿈꾸는 창업의 방향성과 삶의 목표를 끈질기게 파고드는 인하벤처클럽의 창업 방향성 연구 소모임입니다.
-                      </p>
-                      <p>
-                        아이템보다 먼저 '나'와 '방향'을 설계하는 것을 중요하게 여기며, 시장 트렌드에 휩쓸리기보다 내가 왜, 무엇을, 어떻게 만들고 싶은지를 차분히 검증하는 것을 목표로 합니다.
+                        SL(Sincere Lab)는 창업에 진심인 자들이 모여, 각자가 꿈꾸는 창업의 방향성과 삶의 목표를 끈질기게 파고드는 인하벤처클럽의 창업 방향성 연구 소모임입니다. 아이템보다 먼저 '나'와 '방향'을 설계하는 것을 중요하게 여기며, 시장 트렌드에 휩쓸리기보다 내가 왜, 무엇을, 어떻게 만들고 싶은지를 차분히 검증하는 것을 목표로 합니다.
                       </p>
                     </div>
                   </div>
 
-                  {/* 주요 활동 */}
+                  {/* 운영 방식 */}
                   <div className="space-y-3 md:space-y-4">
                     <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                       <span className="text-[#dc143c]">•</span>
-                      주요 활동
+                      운영 방식
                     </h4>
-                    <ul className="pl-6 md:pl-8 space-y-3 md:space-y-4 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
+                    <ul className="pl-6 md:pl-8 space-y-4 md:space-y-6 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
                       <li className="flex items-start gap-3">
                         <span className="text-[#dc143c] font-bold mt-1">-</span>
                         <div>
-                          <strong className="text-gray-900 dark:text-white">방향 선정</strong>
-                          <p className="mt-1">각자가 고민하는 창업 분야·문제의식을 정리하고, 본인이 지향하는 창업의 방향성을 명확한 한 문장으로 정의합니다.</p>
+                          <strong className="text-gray-900 dark:text-white">Self-Directed Inquiry</strong>
+                          <p className="mt-1">매주 각자가 설정한 '내 창업의 핵심 질문'에 대해 답을 찾아가는 과정입니다. "내가 해결하고 싶은 문제는 무엇인가?", "내 창업의 지속 가능한 동력은 무엇인가?" 등 본질적 질문을 통해 창업 방향성을 명확히 합니다. 단순 아이템 발굴이 아닌, 창업가로서의 정체성과 철학을 확립하는 시간입니다.</p>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#dc143c] font-bold mt-1">-</span>
                         <div>
-                          <strong className="text-gray-900 dark:text-white">깊이 있는 대화</strong>
-                          <p className="mt-1">소규모 라운드테이블 형식으로 서로의 방향성을 두고 질문하고 피드백하며, 아이디어가 아닌 '창업가로서의 기준과 철학'을 다집니다.</p>
+                          <strong className="text-gray-900 dark:text-white">Deep Dialogue</strong>
+                          <p className="mt-1">소수 인원으로 구성된 밀도 높은 대화 세션입니다. 각자의 창업 방향성, 가치관, 고민을 깊이 있게 공유하고 서로 질문하며 생각을 확장합니다. 표면적인 네트워킹이 아닌, 진정성 있는 피드백과 통찰을 주고받는 장입니다.</p>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#dc143c] font-bold mt-1">-</span>
                         <div>
-                          <strong className="text-gray-900 dark:text-white">관점 확장</strong>
-                          <p className="mt-1">실패·우회 경험, 롤모델, 시장에 대한 시각 등을 공유하며, 서로의 시야를 넓히는 창업가 토론을 진행합니다.</p>
+                          <strong className="text-gray-900 dark:text-white">Direction Mapping</strong>
+                          <p className="mt-1">한 학기 동안의 탐구를 바탕으로 자신만의 '창업 방향성 맵'을 완성합니다. 내가 추구하는 가치, 해결하고 싶은 문제, 강점 및 역량, 실행 가능한 첫 단계를 시각화하여 정리합니다. 이는 향후 구체적인 사업 아이템 기획의 토대가 됩니다.</p>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#dc143c] font-bold mt-1">-</span>
                         <div>
-                          <strong className="text-gray-900 dark:text-white">방향 재정렬</strong>
-                          <p className="mt-1">일정 주기마다 자신의 방향성을 다시 점검하고, 실제 실행 계획(다음 학기/방학 중 할 일)으로 구체화합니다.</p>
+                          <strong className="text-gray-900 dark:text-white">Business Plan Completion</strong>
+                          <p className="mt-1">SL의 모든 활동은 최종적으로 각자의 방향성이 반영된 사업계획서 1부를 완성하는 것을 목표로 합니다. 자기주도 탐구와 심층 대화에서 나온 인사이트를 바탕으로 문제 정의, 해결 방안, 시장·경쟁 분석, 수익 모델, 실행 계획, 팀 구성까지를 일관된 논리 구조로 문서화합니다. 완성된 사업계획서는 예비창업패키지, 교내·외 창업 경진대회, IR 피치덱 준비 등에 바로 활용 가능한 수준을 지향합니다.</p>
                         </div>
                       </li>
                     </ul>
                   </div>
 
-                  {/* 마무리 문구 */}
-                  <div className="space-y-3 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
-                    <p>
-                      SL에서 다루는 것은 화려한 IR 자료나 스펙이 아니라, "나는 어떤 창업가로 살아가고 싶은가"에 대한 진지한 질문입니다.
-                    </p>
-                    <p className="text-center font-medium text-gray-900 dark:text-white">
-                      지금 당장 창업을 하지 않아도 괜찮지만, 언젠가 반드시 진심으로 창업을 해보고자 하는 마음이 있다면, SL에서 당신의 방향을 함께 설계해 보십시오.
-                    </p>
+                  {/* 프로그램 지원 사항 */}
+                  <div className="space-y-3 md:space-y-4">
+                    <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                      프로그램 지원 사항 (SL 전용)
+                    </h4>
+                    <ul className="pl-6 md:pl-8 space-y-2 text-base md:text-[15px] lg:text-[18px] text-gray-700 dark:text-gray-300 leading-[1.8] sm:leading-relaxed md:leading-relaxed">
+                      <li className="flex items-start gap-3">
+                        <span className="text-[#dc143c] font-bold mt-1">-</span>
+                        <span>방향성·가치관 중심 사업계획서 작성 가이드 및 템플릿 제공</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-[#dc143c] font-bold mt-1">-</span>
+                        <span>초안–피드백–수정의 단계별 사업계획서 작성 스터디 운영</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-[#dc143c] font-bold mt-1">-</span>
+                        <span>예비창업패키지 등 주요 공고 형식(PSST 등)에 맞춘 항목별 코칭</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-[#dc143c] font-bold mt-1">-</span>
+                        <span>완성된 사업계획서를 기반으로 한 IR 피치덱 구성 및 발표 방향 제안</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
