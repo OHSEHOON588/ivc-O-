@@ -190,7 +190,7 @@ export default function LunchBoxLanding() {
               꿈꾸는 자들이 현실을 바꾸는 곳, 인하대학교 유일 실전 창업 동아리 – 인하벤처클럽. 30년의 전통과 실행력으로, 우리는 &apos;아이디어&apos;를 &apos;가치&apos;로 바꿉니다.
             </p>
 
-            <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl">
+            <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-black via-[#dc143c] to-[#dc143c] dark:from-black dark:via-[#dc143c] dark:to-[#dc143c] p-[1px] rounded-full group hover:scale-105 transition-all duration-300 hover:shadow-xl hidden">
               <Button
                 className="w-full sm:w-auto rounded-full bg-white dark:bg-black text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-black/90 px-6 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl group flex items-center justify-center min-h-[44px]"
                 onClick={() => window.open(googleFormUrl, "_blank")}
